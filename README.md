@@ -3,6 +3,13 @@
 BUAA 2023 硕士高等软工课程设计
 Based on: https://github.com/WLFJ/nnengine
 
+基于numpy/cupy的类pytorch的神经网络框架：
+- 实现了各种常用算子（Conv, Pool, MatMul, Transpose, Linear, Concat, Rearrange等等）
+- 实现了基于cupy的GPU加速
+- 实现了基于GPU的切换, 对任意张量或模型进行 ```.to('gpu')``` 或 ```.to('cpu')```操作，会自动递归。
+- 实现了ResNet、GoogLeNet、VGGNet、ViT等模型
+- 预置了mnist、cifar10、cifar100等数据集，运行会自动下载
+
 ## 项目结构
 
 ```
@@ -59,3 +66,18 @@ python run.py --dataset cifar10 --model vit
 python run.py --dataset mnist --model vit
 ```
 如果需要测试模型训练可运行train.py，其中预置了三种数据集的训练方案，可通过调整data参数切换数据集。
+
+
+## 结果
+
+### ResNet-18
+| 测试数据集  | 测试参数          | 测试准确率      |
+|-------------|-------------------|----------------|
+| **cifar-10** | batch_size=64  <br> epochs=2    | 0.73（10类）   |
+| **cifar-100** | batch_size=32  <br> epochs=10    | 0.52（10类）  |
+
+### ViT
+| 测试数据集  | 测试参数              | 测试准确率      |
+|-------------|-----------------------|----------------|
+| **cifar-10** | batch_size=100  <br> epochs=10    | 0.56（1类）   |
+| **cifar-100** | batch_size=100  <br> epochs=40    | **0.64**（100类）|
