@@ -3,7 +3,7 @@
 BUAA 2023 硕士高等软工课程设计
 Based on: https://github.com/WLFJ/nnengine
 
-基于numpy/cupy的类pytorch的神经网络框架：
+基于numpy/cupy的类pytorch的神经网络框架（Neural Network Framwork)：
 - 实现了各种常用算子（Conv, Pool, MatMul, Transpose, Linear, Concat, Rearrange等等）
 - 实现了基于cupy的GPU加速
 - 实现了基于GPU的切换, 对任意张量或模型进行 ```.to('gpu')``` 或 ```.to('cpu')```操作，会自动递归。
