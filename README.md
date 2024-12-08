@@ -74,7 +74,7 @@ python run.py --dataset mnist --model vit
 | 测试数据集  | 测试参数          | 测试准确率      |
 |-------------|-------------------|----------------|
 | **cifar-10** | batch_size=64  <br> epochs=2    | 0.73（10类）   |
-| **cifar-100** | batch_size=32  <br> epochs=10    | 0.52（10类）  |
+| **cifar-100** | batch_size=32  <br> epochs=10    | 0.52（100类）  |
 
 ### ViT
 | 测试数据集  | 测试参数              | 测试准确率      |
